@@ -29,6 +29,7 @@ html{
   
   body {
     margin: 0;
+    background-color: rgb(215, 215, 215);
   }
   
   /**
@@ -749,3 +750,41 @@ html{
     margin-right: .5rem;
 }
 
+/*cards*/
+
+.cards{
+    padding: 1.5rem 0;
+}
+
+
+.card{
+    background-color: rgb(6, 141, 141);
+    padding: 1rem;
+    max-width: 17.5rem;
+    margin: 1rem auto;
+
+}
+
+.card__info, .card h1{
+    text-align: center;
+    color: white;
+}
+
+.closeButton{
+    background-color: rgb(180, 17, 17);
+    color:antiquewhite;
+    font-weight: 600;
+}
+
+@media only screen and (min-width:768px){
+    .cards{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap:1rem;
+    }
+
+    .card{
+        flex:0 0 calc(33.3%);
+    }
+}

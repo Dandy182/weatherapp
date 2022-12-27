@@ -5,7 +5,7 @@ export default function Card(props){
     const {name, max, min, weather, img, onClose } = props;
     
     return(<div className="card">
-        <button className="closeButton" onClick={onClose}>X</button>
+        <button className="" onClick={onClose}>X</button>
         <h1>{name}</h1>
         <div className="contenedor card__info">
             <p><span>Temp. min:</span>{min}°</p>

@@ -14,7 +14,8 @@ export default  function App(){
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`)
             .then(res => res.json())
             .then(c =>{
-                if(c.main !== undefined){
+
+                if(c.main !== undefined ){
                     let ciudad = {
                         name:c.name,
                         max:Math.round(c.main.temp_max),
@@ -26,7 +27,8 @@ export default  function App(){
                         clouds:c.clouds.all,
                         lat:c.coord.lat,
                         lon:c.coord.lon,
-                        id:c.id
+                        id:c.id,
+                        key:c.id,
                     }
 
                     setCities(oldCities => [...oldCities, ciudad]);

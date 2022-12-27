@@ -10,10 +10,11 @@ export default function SearchBar({onSearch}){
     let handlerSubmit = (e) =>{
         e.preventDefault();
         onSearch(city)
+        setCity('')
     }
 
     return(<form onSubmit={handlerSubmit} className='formulario'>
-        <input type="text" placeholder='ingresa la ciudad' className="input" onChange={handlerInput} />
+        <input type="text" placeholder='ingresa la ciudad' className="input" onChange={handlerInput} value={city} />
         <button type='submit' className="btn btn__buscar">Buscar</button>
     </form>)
 }
